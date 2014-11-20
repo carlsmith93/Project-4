@@ -88,3 +88,12 @@ else{
 console.log("is the input string a url? " + urlcheck)
 }
 url(prompt("enter a url here including http:// or https://"));
+
+
+//Given a string that is a list of things separated by a given string, as well as another string separator, return a string with the first separator changed to the second: “a,b,c” + “,” + “/” --> “a/b/c”
+
+var inputstring  = function(string){
+var stringfixed = string.replace("," , "/")
+	console.log(stringfixed);
+}
+inputstring = (prompt("enter a list of things here separated by commas!"))
