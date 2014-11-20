@@ -64,3 +64,27 @@ else{
 userinput(parseInt(prompt("enter your 1st number here to see if it is a fuzzy match!")));
 userinput(parseInt(prompt("enter your 2nd number here to see if it is a fuzzy match!")));
 userinput(parseInt(prompt("enter your 3rd number here to see if it is a fuzzy match!")));
+
+
+
+//  Is the string a URL (Does it start with http:// or https://)?
+
+var url = function(urlinput){
+var urlconf1 = urlinput.search("http://");
+var urlconf2 = urlinput.search("https://");
+
+if (urlconf1 == 0){
+	var urlcheck = true;
+}
+else{
+	if(urlconf2 == 0){
+		var urlcheck = true;
+	}
+	else{
+		var urlcheck = false;
+	}
+}
+
+console.log("is the input string a url? " + urlcheck)
+}
+url(prompt("enter a url here including http:// or https://"));
