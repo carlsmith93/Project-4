@@ -12,13 +12,13 @@ console.log(inputnumber)
 //Find the smallest value in an array than is greater than a given number.
 
 var smallestvalue = function(inputvalue){
-var numarray = [1,12,18]	
+var numarray = [3,12,18]	
 
-parseInt(smallestvalue);
-if (smallestvalue < 1){
+
+if (smallestvalue < 3){
 	console.log(numarray[0])
 }
-else if ( 12 > smallestvalue){
+else if ( smallestvalue < 12){
 	console.log(numarray[1])
 }
 else{
@@ -26,4 +26,15 @@ else{
 }
 };
 	
-smallestvalue(prompt("enter a number here", ""))
+smallestvalue(parseInt(prompt("enter a number here", ""))) //input value here
+
+
+
+//Format a number to use a specific number of decimal places
+
+var number = function(inputnumber){ //start of function
+var decimal = inputnumber.toFixed(2)
+console.log(decimal)
+return number
+}
+number(parseFloat(prompt("enter a number here wiht more than 2 decimals!","")))  //Parsefloat changes number to decimal
