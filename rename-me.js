@@ -1,7 +1,6 @@
 //convert string to number datatype.
 
-var integer = function(numberstring){  //  MAKEUP: Project 2 New Technical/Functions
-
+var integer = function(numberstring){  
 parseInt(numberstring)
 return numberstring
 };
@@ -33,8 +32,35 @@ smallestvalue(parseInt(prompt("enter a number here", ""))) //input value here
 //Format a number to use a specific number of decimal places
 
 var number = function(inputnumber){ //start of function
-var decimal = inputnumber.toFixed(2)
+var decimalplace = parseInt(prompt("enter how many decimal places you want!",""))
+var decimal = inputnumber.toFixed(decimalplace)
 console.log(decimal)
 return number
 }
-number(parseFloat(prompt("enter a number here wiht more than 2 decimals!","")))  //Parsefloat changes number to decimal
+number(parseFloat(prompt("enter a number here with or without a decimal","")))  //Parsefloat changes number to decimal
+
+
+
+//Fuzzy-match a number
+
+var userinput = function(fuzzy){
+var number = 10;
+var percentage = 0.5;
+var	higherfuzzy = (number*percentage)+number
+var lowerfuzzy = number - (number*percentage)
+if (higherfuzzy >= fuzzy){
+	if (fuzzy >= lowerfuzzy){
+		console.log("The number is a fuzzy match!")
+	}
+	else{
+		console.log("The number is not a fuzzy match!")
+	}
+}
+else{
+	console.log("The number is not a fuzzy match")
+}
+}
+
+userinput(parseInt(prompt("enter your 1st number here to see if it is a fuzzy match!")));
+userinput(parseInt(prompt("enter your 2nd number here to see if it is a fuzzy match!")));
+userinput(parseInt(prompt("enter your 3rd number here to see if it is a fuzzy match!")));
