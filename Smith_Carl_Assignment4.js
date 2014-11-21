@@ -23,6 +23,7 @@ else if ( smallestvalue < 12){
 else{
 	console.log(numarray[2])
 }
+return inputvalue
 };
 	
 smallestvalue(parseInt(prompt("enter a number here", ""))) //input value here
@@ -43,7 +44,7 @@ number(parseFloat(prompt("enter a number here with or without a decimal","")))  
 
 //Fuzzy-match a number
 
-var userinput = function(fuzzy){
+var fuzzymatch = function(fuzzy){
 var number = 10;
 var percentage = 0.5;
 var	higherfuzzy = (number*percentage)+number
@@ -61,9 +62,9 @@ else{
 }
 }
 
-userinput(parseInt(prompt("enter your 1st number here to see if it is a fuzzy match!")));
-userinput(parseInt(prompt("enter your 2nd number here to see if it is a fuzzy match!")));
-userinput(parseInt(prompt("enter your 3rd number here to see if it is a fuzzy match!")));
+fuzzymatch(parseInt(prompt("enter your 1st number here to see if it is a fuzzy match!")));
+fuzzymatch(parseInt(prompt("enter your 2nd number here to see if it is a fuzzy match!")));
+fuzzymatch(parseInt(prompt("enter your 3rd number here to see if it is a fuzzy match!")));
 
 
 
@@ -84,8 +85,8 @@ else{
 		var urlcheck = false;
 	}
 }
-
 console.log("is the input string a url? " + urlcheck)
+return urlcheck
 }
 url(prompt("enter a url here including http:// or https://"));
 
@@ -94,6 +95,6 @@ url(prompt("enter a url here including http:// or https://"));
 
 var inputstring  = function(string){
 var stringfixed = string.replace("," , "/")
-	console.log(stringfixed);
+console.log(stringfixed);
 }
 inputstring = (prompt("enter a list of things here separated by commas!"))
